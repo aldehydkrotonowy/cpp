@@ -1,0 +1,43 @@
+
+              Reference Mathematic books :
+              ==========================
+
+ I give these books for help. 
+ The student solutions manuals, are indispensable.
+ These books are not the best, 
+ (I don't know the best), 
+ but just good books.
+
+ I think it is best to begin by the first step,
+ then the second step, ...
+
+ In the second step you can begin, for example by :
+
+    a)         the calulus book.
+    b) or      the linear algebra book.
+    c) or with the two books in the same time.
+
+ 
+                     First Step :
+                     ==========
+
+ By Swokowski :
+
+    a) Algebra and Trigonometry with Analytic Geometry.
+    b) Student solutions manual.
+
+
+                     Second Step :
+                     ===========
+
+ By Swokowski :
+
+    a) Calculus.
+    b) Student's solutions manual (vol1, vol2).
+
+
+ By Anton-Rorres
+
+    a) Elementary Linear Algebra (Applications version)
+    b) Student's solutions manual.
+

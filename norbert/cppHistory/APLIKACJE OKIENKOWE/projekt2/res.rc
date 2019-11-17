@@ -1,0 +1,27 @@
+#include <windows.h>// DS_... and WS_... are defined here
+#include "res.h"
+//DIALOG resource
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 239, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "My About Box"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,174,18,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,174,35,50,14
+	 //becouse ID_STATIC was undefines so I use -1 instead (in GROUPBOX and CTEXT)
+    GROUPBOX        "About this program...",-1,7,7,225,52
+    CTEXT           "An example program showing how to use Dialog Boxes\r\n\r\nby theForger",
+                    -1,16,18,144,33
+END
+//nameID DIALOGEX x, y, width, height [ , helpID] [optional-statements]  {control-statements}
+IDD_TOOLBAR DIALOGEX 10, 10, 120, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "My Dialog Toolbar"
+FONT 8, "MS Sans Serif"
+BEGIN
+	//PUSHBUTTON text, id, x, y, width, height [, style [, extended-style]]
+	PUSHBUTTON "&Press this button", ID_BUTTON_PRESS, 7, 7, 90, 28
+	PUSHBUTTON "&Or this one", ID_BUTTON_OTHER, 7, 40, 90, 28
+END
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "hello.manifest"

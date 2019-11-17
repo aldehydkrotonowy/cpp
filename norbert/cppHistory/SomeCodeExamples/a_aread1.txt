@@ -1,0 +1,28 @@
+
+     freeware                          xhunga@tiscali.fr  
+
+     Linear algebra functions in language c (fractions) :
+
+        
+  a) Basic matrices functions :
+
+        addm, subm, multm, powm, smultm, transpose, trace,
+        det, minor, mminor, cofactor,  mcofactor, adjoint,
+        inverse, inverse(gaussjordan), gauss, gaussjordan,
+        LU.
+
+  b) Basic vectors functions in R**n :
+
+        norm, distance, innerproduct,coldim, rowdim, rank,
+        nullity, leastsqrs.
+
+     
+      I have used gcc.2.9 (Dev-C++ 4    ), 
+                  gcc.3.2 (v2DJGPP Rhide).
+                  Ch 4.0 Standard Edition.
+
+        The list of all  the programs : aaprogr.txt
+
+        Save your work in a text file : aaasave.txt
+        ShortName  For  The  Matrices : aashtnm.txt
+ 

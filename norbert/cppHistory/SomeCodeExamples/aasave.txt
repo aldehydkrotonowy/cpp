@@ -1,0 +1,36 @@
+
+                                  Save your work in a text file :
+                                  =============================
+              First step :
+              ==========
+
+ Compile : xyz.c 
+           You create xyz.exe
+
+    Copy :      xyz.exe in the C:\
+
+          Verify that you have C:\xyz.exe
+
+
+              Second step :
+              ===========
+
+    Open : a DOS window.
+                                 Microsoft(R) Windows 98
+                                 (C)Copyright Microsoft Corp 1981-1998.
+
+                                 C:\WINDOWS>
+
+   a)  C:\WINDOWS>
+   b)  C:\WINDOWS>cd..    return
+   b)  C:\>
+   c)  C:\>xyz > a.txt    return
+
+
+      return   return ... 
+    x return x return ... to stop.
+
+
+    Exit of the DOS window.
+
+    You can find the text of the program in the file a.txt

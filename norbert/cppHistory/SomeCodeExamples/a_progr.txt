@@ -1,0 +1,37 @@
+
+ Try the examples in this order.
+
+ (You can compile the *.c files directly without create a project)
+
+  a) Basic matrices functions :
+
+        addmF(R).c : Add two matrices.
+        submF(R).c   
+       multmF(R).c : multiply two matrices.
+        powmF(R).c   multiply a matrix by itself, (A**0 = id, A**1 = A, A**2 = A*A, ..)
+      smultmF(R).c : multiply a scalar by a matrice.
+      transpF(R).c : transpose.
+       traceF(R).c
+         detF(R).c : Determinant. 
+       minorF   .c
+      mminorF   .c : minor matrix.
+      cofactF   .c : cofactor.
+      mcfactF   .c : cofactors matrix.
+        adjtF   .c : adjoint.
+         invF(R).c : inverse. (use     adjoint())
+     inv_gjdF(R).c : inverse  (use gaussjordan())
+      inv_xhF(R).c : inverse  (use the work on identity matrix)
+         gssF   .c : gauss.
+       gssjdF(R).c : gauss jordan.
+      gjInone(R).c : gauss jordan. (Sytem with none or several solutions)
+           LU(R).c : LU.           (decomposition)
+
+  b) Basic vectors functions in R**n :
+   
+         dist(R).c : distance.                       leastsqrs.c : least squares solution.
+         norm(R).c : 
+  innerproduct  .c : 
+       coldim(R).c :
+       rowdim(R).c :
+         rank(R).c :
+      nullity(R).c :

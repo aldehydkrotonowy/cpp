@@ -1,0 +1,2 @@
+this string will be in example.txt. 
+another string

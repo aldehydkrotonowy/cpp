@@ -1,0 +1,35 @@
+
+
+                            Ch 4.0 released
+                            ===============
+
+
+ * You can also use Ch 4.0 released (C99). 
+ * The Standard Edition is free in all platforms.
+
+
+  In first, I suppose that your c and h files are in the directory :
+
+   C:\Mes Documents\c\ch\bernard
+
+  In the dosshell of Ch type :
+
+  cd C:\Mes Documents\c\ch\bernard  RETURN
+
+
+  Now if you want to try the file "addmFR.c" type :
+
+  addmFR.c RETURN
+
+
+  Or if you want to choose the size of the matrices type : 
+
+  addmFR.c 2 3 RETURN
+
+
+  To quit Ch type :
+
+  exit RETURN 
+  exit RETURN 
+
+ Ps : "cd" dos command for change directory.

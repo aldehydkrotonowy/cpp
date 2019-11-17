@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1384820739 source:d:\projekty c++\okienkakilkaplikow\main.cpp
+	<windows.h>
+	"MainWindow.h"
+
+1384820739 d:\projekty c++\okienkakilkaplikow\mainwindow.h
+	<windows.h>
+
+1384820739 source:d:\projekty c++\okienkakilkaplikow\mainwindow.cpp
+	<windows.h>
+	"MainWindow.h"
+

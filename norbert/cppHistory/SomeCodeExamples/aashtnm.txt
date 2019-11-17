@@ -1,0 +1,34 @@
+
+      Short Name For The Matrices :
+      ===========================
+
+             F  : Fraction
+             I  : Integer
+             R  : Random
+
+             m  : matrix
+             v  : vector
+             r  : row
+             c  : column
+             p_ : print 
+
+            p_m : print matrix
+           p_cI : print column integer
+           R_mF : Rand matrix fraction
+           
+ 
+     A * B      : AB
+    (A * B) * C : AB_C
+          s * A : sA
+    
+          A + B : AplsB
+          A - B : AmnsB
+
+    (A + B) + C : AplsB_plsC
+    A + (B + C) : Apls_BplsC
+
+     Inverse(A) :   InvA
+   Transpose(A) :  TrpsA
+
+
+            
