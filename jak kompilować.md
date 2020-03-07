@@ -1,4 +1,3 @@
-<<<<<<< HEAD:jak kompilować.md
 kompilacja dla windowsa
 gcc hello.c -mwindows
 
@@ -47,41 +46,3 @@ g++ -S hello.cpp -> assembly
 g++ -c file_name
 //-----------------------------------------------------------------------------
 g++ -pedantic -Wall -Wextra -std=c++17 fileSystem.cpp -o fileSystem.exe
-=======
-kompilacja dla windowsa
-gcc hello.c -mwindows
-
-kompilacja pliku .rc
-windres my.rc -O coff -o my.res
-
-dołączenie do pliku
-gcc hello.c obj1.o obj2.o my.res
-//-----------------------------------------------------------------------------
-
-
-gcc flags
-preprocesor controling
--D Predefine name as a macro, with definition 1.  Example -D UNICODE
--c compile source file but do not link
-//-----------------------------------------------------------------------------
-
-//////////////////////////////////////////////////////////
-//gcc hello.c -Wall -g -o hello.exe 
-//-g 				- gdb debuger
-//-Wall 			- early warnings
-//-ansi 			- ANSI C compatible code
-//-Werror 			- warnings as an error, no exe file
-//////////////////////////////////////////////////////////
-//-----------------------------------------------------------------------------
-
-windres temp.rc temp.o
-gcc -mwindows temp.o temp.c -o tempWin.exe
-//-----------------------------------------------------------------------------
-
-@ECHO OFF
-ECHO starting compiliation
-gcc -D UNICODE -D _UNICODE -mwindows hello.c res.res -luxtheme -lcomctl32
-ECHO done.
-ECHO starting program
-a.exe
->>>>>>> 916fb47bd83d737ab515befea3e73a6af134e38a:jak kompilować.txt
