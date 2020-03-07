@@ -18,9 +18,10 @@ preprocesor controling
 //////////////////////////////////////////////////////////
 //gcc hello.c -Wall -g -o hello.exe 
 //-g 				- gdb debuger
-//-Wall 			- early warnings
+//-Wall 			- -Wall enables all compiler's warning messages (early warnings)
 //-ansi 			- ANSI C compatible code
 //-Werror 			- warnings as an error, no exe file
+// source: https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wextra
 //////////////////////////////////////////////////////////
 //-----------------------------------------------------------------------------
 
@@ -34,3 +35,14 @@ gcc -D UNICODE -D _UNICODE -mwindows hello.c res.res -luxtheme -lcomctl32
 ECHO done.
 ECHO starting program
 a.exe
+
+
+
+//-----------------------------------------------------------------------------
+c_cpp_properties.json, launch.json and tasks.json examples
+https://github.com/Paras44589/VS-Code-C-Development-Setup
+
+g++ -S hello.cpp -> assembly
+g++ -c file_name
+//-----------------------------------------------------------------------------
+g++ -pedantic -Wall -Wextra -std=c++17 fileSystem.cpp -o fileSystem.exe
