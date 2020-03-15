@@ -24,6 +24,7 @@
 void read_elf_header(const char* elfFile, const char* outputFile) {
   // switch to Elf32_Ehdr for x86 architecture.
   Elf64_Ehdr header;
+	char separator[] = "/n/n----------------------/n/n";
 
   FILE* file = fopen(elfFile, "rb");
   if(file) {
@@ -42,6 +43,7 @@ void read_elf_header(const char* elfFile, const char* outputFile) {
        FILE* fout = fopen(outputFile, "wb");
        if(fout) {
          fwrite(&header, 1, sizeof(header), fout);
+				 fwrite(&header, sizeof(char), sizeof(separator), fout);
          fclose(fout);
        }
     }
