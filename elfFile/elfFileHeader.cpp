@@ -21,50 +21,66 @@
 //   uint16_t    e_shstrndx;          /* Section header string table index */
 // } Elf64Hdr;
 
+// typedef struct elf64_phdr {
+//   Elf64_Word p_type;
+//   Elf64_Word p_flags;
+//   Elf64_Off p_offset;		/* Segment file offset */
+//   Elf64_Addr p_vaddr;		/* Segment virtual address */
+//   Elf64_Addr p_paddr;		/* Segment physical address */
+//   Elf64_Xword p_filesz;		/* Segment size in file */
+//   Elf64_Xword p_memsz;		/* Segment size in memory */
+//   Elf64_Xword p_align;		/* Segment alignment, file & memory */
+// } Elf64_Phdr;
+
 void read_elf_header(const char* elfFile, const char* outputFile) {
-  // switch to Elf32_Ehdr for x86 architecture.
-  Elf64_Ehdr header;
-	char separator[] = "/n/n----------------------/n/n";
+	// switch to Elf32_Ehdr for x86 architecture.
+	Elf64_Ehdr header;
+	Elf64_Phdr fileHeader;
+	char separator[] = "--------------------------------";
 
-  FILE* file = fopen(elfFile, "rb");
-  if(file) {
-    // read the header
-    fread(&header, 1, sizeof(header), file);
+	FILE* file = fopen(elfFile, "rb");
+	if(file) {
+		// read the header
+		fread(&header, 1, sizeof(header), file);
 
-    // check so its really an elf file
+		// check so its really an elf file
 		// header.e_ident - pointer to memory
 		// EFLMAG - pointer to memory 2
 		// SELFMAG - number of bytes to compare
-    if (memcmp(header.e_ident, ELFMAG, SELFMAG) == 0) {
-       // this is a valid elf file
+		if (memcmp(header.e_ident, ELFMAG, SELFMAG) == 0) {
+			 // this is a valid elf file
 
 			std::cout<<"this is a valid elf file \n";
 			 // write the header to the output file
-       FILE* fout = fopen(outputFile, "wb");
-       if(fout) {
-         fwrite(&header, 1, sizeof(header), fout);
-				 fwrite(&header, sizeof(char), sizeof(separator), fout);
-         fclose(fout);
-       }
-    }
 
-    // finally close the file
-    fclose(file);
-  }
+			 FILE* fout = fopen(outputFile, "wb");
+			 if(fout) {
+				 	fwrite(&header, 1, sizeof(header), fout);
+				 	fwrite(&separator, sizeof(char), sizeof(separator), fout);
+				 	fwrite(&fileHeader, 1, sizeof(fileHeader), fout);
+					fwrite(&separator, sizeof(char), sizeof(separator), fout);
+				 	fclose(fout);
+			 }
+			 std::cout<<"e_phoff is: "<<header.e_phoff<<std::endl;
+		}
+
+		// finally close the file
+		fclose(file);
+	}
 }
 
 int main(int argc, char* argv[]){
 		
 		std::cout << "You have entered " << argc  << " arguments:" << "\n"; 
-  
-    for (int i = 0; i < argc; ++i) {
-        std::cout << argv[i] << "\n"; 
+	
+		for (int i = 0; i < argc; ++i) {
+				std::cout << i << ". "<< argv[i] << "\n"; 
 		}
 
 		char* fileName = argv[1];
 		char* fileOut = argv[2];
 
-		std::cout<< "start reading header \n";
+		std::cout<< "\n\nstart reading header \n";
 
 		read_elf_header(fileName, fileOut);
 
