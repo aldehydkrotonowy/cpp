@@ -24,6 +24,15 @@ T mypare<T>::getMax()
   return retval;
 }
 
+//fibonacci template version
+template<size_t n> struct fib;
+template<> struct fib<1> {const static auto value = 1;};
+template<> struct fib<0> {const static auto value = 1;};
+
+template <size_t n> struct fib {
+  const static auto value = fib<n-1>::value  + fib<n-2>::value;
+};
+
 int main()
 {
   mypare<int> myobject(100, 200);
