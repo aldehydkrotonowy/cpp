@@ -46,3 +46,12 @@ g++ -pedantic -Wall -Wextra -std=c++17 fileSystem.cpp -o fileSystem.exe
 
 .clang-format opitons
 https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+//-----------------------------------------------------------------------------
+cpp -v - list of include paths
+https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art026
+standard GCC search order in unix
+  /usr/local/include
+  libdir/gcc/target/version/include
+  /usr/target/include
+  /usr/include
+//-----------------------------------------------------------------------------
